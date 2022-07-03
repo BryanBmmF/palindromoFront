@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Palindromo</title>
+</head>
+<body>
+
+<h1>Palindromos</h1>
+<p>Ingrese una palabra para saber si es palindromo:</p>
+<input type="text" id="palabra">
+<input type="button" value="evaluar" onclick="evaluar();">
+<br>
+<hr>
+<label id="primos"></label>
+
+</body>
+
+<script>
+    function evaluar() {
+        var palabra = document.getElementById("palabra").value;
+        var reverse = palabra.split("").reverse().join("");
+        
+        if(palabra==reverse){
+            document.getElementById("primos").innerHTML = "La palabra ingresada SI es palindromo";
+        } else {
+            document.getElementById("primos").innerHTML = "La palabra ingresada NO es palindromo";
+        }
+    }
+
+    </script>
+</html> 
